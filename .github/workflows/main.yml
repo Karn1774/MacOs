@@ -1,0 +1,20 @@
+name: Temporary macOS Desktop (RustDesk)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  start-macos-rustdesk:
+    runs-on: macos-latest
+    steps:
+      - name: Install RustDesk on macOS
+        run: |
+          brew install --cask rustdesk
+
+      - name: Configure and Start RustDesk
+        run: |
+          sudo /Applications/RustDesk.app/Contents/MacOS/RustDesk --password mypassword &
+          sleep 10
+          echo "=== RustDesk ID ==="
+          /Applications/RustDesk.app/Contents/MacOS/RustDesk --get-id
+          sleep 3600
