@@ -13,9 +13,9 @@ jobs:
 
       - name: Start macOS Desktop Session
         run: |
-          /Library/PrivilegedHelperTools/ChromeRemoteDesktopHost.app/Contents/MacOS/remoting_start_host \
-            --code="4/0AUn6Hd-_oerqn08EnBppI042tQcHc_RdZL2bNFmkLJ3IuIkSNyLskXVDiT3pJxi6shHjUQ" \
-            --redirect-url="https://google.com" \
+          sudo /Library/PrivilegedHelperTools/ChromeRemoteDesktopHost.bundle/Contents/MacOS/remoting_start_host \
+            --code="4/0AUn6Hd_eRVohtxdqsNxP-oNsGa7lxfVB9BNiHP-mKzpWgYrlYgCxjwbQ1E_mtPvan0zqgQ" \
+            --redirect-url="https://remotedesktop.google.com/_/oauthredirect" \
             --name="GitHub-MacOS" \
             --pin=123456
           sleep 3600
