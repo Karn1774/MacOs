@@ -13,8 +13,9 @@ jobs:
 
       - name: Configure and Start RustDesk
         run: |
-          sudo /Applications/RustDesk.app/Contents/MacOS/RustDesk --password mypassword &
+          open -a RustDesk
           sleep 10
+          sudo /Applications/RustDesk.app/Contents/MacOS/RustDesk --password mypassword
           echo "=== RustDesk ID ==="
           /Applications/RustDesk.app/Contents/MacOS/RustDesk --get-id
           sleep 3600
